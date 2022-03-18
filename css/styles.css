@@ -1,2 +1,143 @@
 /* CSS Variables - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root{
+    --white: #fff;
+    --dk-blue: #0d1238;
+    --lg-blue: #272f70;
+    --dk-green: #374d12;
+    --lg-green: #54761b;
+}
 
+body {
+   background-color: var(--dk-blue);
+   background-image: url(../img/oriental-tiles.png);
+   color: var(--white);
+}
+a{
+    color: var(--lg-green);
+    text-decoration: none;
+}
+
+/* *************** typography *************** */
+h2{
+    font-family: sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+p{
+    margin-bottom: 1.5rem;
+}
+
+/* *************** section / form *************** */
+section{
+    background-color: rgba(13, 18, 56, 0.7);
+    margin-top: 5rem;
+    padding: 1rem;
+}
+fieldset{
+    border: none;
+    background-color: var(--white);
+    color: var(--dk-blue);
+    border-radius: 5px;
+    padding: 0 0 1rem 0;
+}
+
+fieldset > p{
+    background-color: var(--lg-green);
+    color: var(--white);
+    padding: 0.75rem;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+fieldset > div{
+    padding: 0 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+fieldset label{
+    display: block;
+}
+
+fieldset input{
+    width: 100%;
+    padding: 0 0.5rem;
+    line-height: 2.5rem;
+    border: 1px solid #a2adb7;
+    border-radius: 5px;
+}
+/* attributes selectors */
+input[type=radio],
+input[type=checkbox]{
+    width: unset;
+}
+/* ******** ICA04 Finishing up ******** */
+.radio{
+    display: flex;
+    flex-direction: column;
+}
+fieldset h3{
+    padding: 0 0.75rem;
+}
+.radio > div{
+    display: flex;
+    flex-direction: column;
+}
+.radio-row-one > div {
+    display: flex;
+}
+.radio-row-two > div {
+    display: flex;
+}
+input[type=submit]{
+    background-color: var(--lg-blue);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: sans-serif;
+}
+input[type=text],
+input[type=email],
+input[type=password] {
+    background-color: whitesmoke;
+}
+@media screen and (min-width: 1000px) {
+    fieldset{
+        width: 650px;
+    }
+    section{
+        display: flex;
+    }
+    h2,
+    p {
+        padding: 0 2rem 0 0;
+    }
+    .radio > div {
+        display: flex;
+        flex-direction: row;
+    }
+    .radio-row-one{
+        gap: 15rem;
+    }
+    .radio-row-two{
+        gap: 13.68rem;
+    }
+    fieldset label{
+        display: block;
+    }
+    .radio-row-one label{
+        display: flex;
+    } 
+}
+@media screen and (min-width: 1440px) {
+    section{
+        width: 1400px;
+        padding: 1rem;
+        margin: auto;
+    }
+    h2,
+    p {
+        padding: 0 5rem 0 0;
+        font-family: auto;
+    }
+}
